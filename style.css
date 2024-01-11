@@ -164,6 +164,14 @@ main {
   cursor: pointer;
 }
 
+.header__button:is(:hover, :focus-visible) {
+  opacity: 0.6;
+}
+
+.header__button-dark:is(:hover, :focus-visible) {
+  filter: brightness(0%);
+}
+
 .header__button::after {
   content: url(assets/images/icon-sun.svg);
 }
