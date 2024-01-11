@@ -83,10 +83,7 @@ const updateData = (json) => {
     date[0]
   }`;
 
-  json.bio
-    ? (elements.bio.innerText = json.bio)
-    : elements.bio.classList.add("hidden");
-
+  elements.bio.innerHTML = json.bio || "This profile has no bio";
   elements.repos.innerText = json.public_repos;
   elements.followers.innerText = json.followers;
   elements.following.innerText = json.following;
