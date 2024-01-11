@@ -16,6 +16,6 @@ const turnToLightMode = () => {
 darkModeButton.addEventListener("click", turnToDarkMode);
 lightModeButton.addEventListener("click", turnToLightMode);
 
-if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-  turnToDarkMode();
+if (window.matchMedia("(prefers-color-scheme: light)").matches) {
+  turnToLightMode();
 }
