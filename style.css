@@ -103,11 +103,23 @@ h6 {
   --clr-neutral-200: hsl(227, 100%, 98%);
 
   --clr-shadows: rgba(70, 96, 187, 0.2);
+  --clr-button: hsl(0, 0%, 100%);
 
   --ff-primary: "Space Mono", monospace;
 
   --fw-regular: 400;
   --fw-bold: 700;
+}
+
+.dark-mode {
+  --clr-accent-gray: hsl(0, 0%, 100%);
+  --clr-accent-grayish-blue: hsl(0, 0%, 100%);
+  --clr-accent-dark-blue: hsl(0, 0%, 100%);
+
+  --clr-neutral-100: hsl(222, 41%, 20%);
+  --clr-neutral-200: hsl(220, 40%, 13%);
+
+  --clr-shadows: none;
 }
 
 body {
@@ -152,6 +164,10 @@ main {
 }
 
 .header__button::after {
+  content: url(assets/images/icon-sun.svg);
+}
+
+.header__button--dark::after {
   content: url(assets/images/icon-moon.svg);
 }
 
@@ -191,6 +207,9 @@ main {
   width: 100%;
   border: none;
   cursor: pointer;
+  background: none;
+  appearance: none;
+  color: var(--clr-accent-dark-blue);
 }
 
 .search__input::placeholder {
@@ -199,7 +218,7 @@ main {
 }
 
 .search__submit {
-  color: var(--clr-neutral-100);
+  color: var(--clr-button);
   font-weight: var(--fw-bold);
   font-size: 0.875rem;
   background-color: var(--clr-accent-blue);
