@@ -34,35 +34,49 @@
             placeholder="Search GitHub username..."
           />
           <button type="submit" class="search__submit">Search</button>
+          <div
+            class="search__error hidden"
+            id="input-error"
+            aria-live="assertive"
+          ></div>
         </form>
       </search>
-      <div class="data">
-        <div class="data__user">
-          <img
-            src="https://avatars.githubusercontent.com/u/76066995?v=4"
-            alt=""
-            class="user__image"
-          />
-          <h2 class="user__username">username</h2>
-          <p class="user__tag">@tag</p>
-          <p class="user__joined">Joined 25 Jan 2011</p>
-        </div>
-        <p class="data__bio">
+      <div class="loading hidden" aria-hidden="true" id="loading">
+        <div class="load"></div>
+      </div>
+      <div class="data hidden" id="data">
+        <img
+          src="https://avatars.githubusercontent.com/u/76066995?v=4"
+          alt=""
+          class="user__image"
+          id="user-img"
+        />
+        <h2 class="user__username" id="user-name">username</h2>
+        <p class="user__tag" id="user-tag">@tag</p>
+        <p class="user__joined" id="user-joined">Joined 25 Jan 2011</p>
+        <p class="data__bio" id="user-bio">
           Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio.
           Quisque volutpat mattis eros.
         </p>
         <ul class="data__numbers">
-          <li>Repos<strong>8</strong></li>
-          <li>Followers<strong>4125</strong></li>
-          <li>Following<strong>9</strong></li>
+          <li>Repos<strong id="user-repos">8</strong></li>
+          <li>Followers<strong id="user-followers">4125</strong></li>
+          <li>Following<strong id="user-following">9</strong></li>
         </ul>
         <ul class="data__info">
-          <li class="info__item info__item--location">location</li>
-          <li class="info__item info__item--blog">blog</li>
-          <li class="info__item info__item--twitter info__item--disabled">
+          <li class="info__item info__item--location" id="user-location">
+            location
+          </li>
+          <li class="info__item info__item--blog" id="user-blog">blog</li>
+          <li
+            class="info__item info__item--twitter info__item--disabled"
+            id="user-twitter"
+          >
             Not available
           </li>
-          <li class="info__item info__item--company">company</li>
+          <li class="info__item info__item--company" id="user-company">
+            company
+          </li>
         </ul>
       </div>
     </main>
