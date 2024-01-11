@@ -15,12 +15,15 @@
 
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
+  <body class="dark-mode">
     <main>
       <div class="header">
         <h1 class="header__title">devfinder</h1>
-        <button class="header__button hidden" id="light-mode">Light</button>
-        <button class="header__button header__button--dark" id="dark-mode">
+        <button class="header__button" id="light-mode">Light</button>
+        <button
+          class="header__button header__button--dark hidden"
+          id="dark-mode"
+        >
           Dark
         </button>
       </div>
@@ -82,7 +85,7 @@
         </ul>
       </div>
     </main>
-    <script src="data.js"></script>
     <script src="darkmode.js"></script>
+    <script src="data.js"></script>
   </body>
 </html>
