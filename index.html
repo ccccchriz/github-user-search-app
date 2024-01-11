@@ -16,7 +16,56 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    devfinder Light Dark Search GitHub username... Search Joined Repos Followers
-    Following
+    <main>
+      <div class="header">
+        <h1 class="header__title">devfinder</h1>
+        <button class="header__button hidden">Light</button>
+        <button class="header__button header__button--dark">Dark</button>
+      </div>
+      <search class="search">
+        <form action="" class="search__form" id="search-form">
+          <label for="username" class="visually-hidden">github username</label>
+          <input
+            type="search"
+            name="username"
+            id="username"
+            size="1"
+            class="search__input"
+            placeholder="Search GitHub username..."
+          />
+          <button type="submit" class="search__submit">Search</button>
+        </form>
+      </search>
+      <div class="data">
+        <div class="data__user">
+          <img
+            src="https://avatars.githubusercontent.com/u/76066995?v=4"
+            alt=""
+            class="user__image"
+          />
+          <h2 class="user__username">username</h2>
+          <p class="user__tag">@tag</p>
+          <p class="user__joined">Joined 25 Jan 2011</p>
+        </div>
+        <p class="data__bio">
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio.
+          Quisque volutpat mattis eros.
+        </p>
+        <ul class="data__numbers">
+          <li>Repos<strong>8</strong></li>
+          <li>Followers<strong>4125</strong></li>
+          <li>Following<strong>9</strong></li>
+        </ul>
+        <ul class="data__info">
+          <li class="info__item info__item--location">location</li>
+          <li class="info__item info__item--blog">blog</li>
+          <li class="info__item info__item--twitter info__item--disabled">
+            Not available
+          </li>
+          <li class="info__item info__item--company">company</li>
+        </ul>
+      </div>
+    </main>
+    <script src="data.js"></script>
   </body>
 </html>
